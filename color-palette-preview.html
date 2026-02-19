@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Cedar Platform - Color Palette Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            margin-bottom: 3rem;
+            font-size: 1.125rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #8b6a4f;
+        }
+        
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .color-swatch {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .color-block {
+            height: 120px;
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+        }
+        
+        .color-info {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 1rem;
+        }
+        
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            font-size: 0.875rem;
+        }
+        
+        .color-hex {
+            font-family: "Courier New", monospace;
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+        
+        .usage {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 0.5rem;
+        }
+        
+        .component-demo {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .button-demo {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            padding: 0.625rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: #745541;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #8b6a4f;
+        }
+        
+        .btn-ghost {
+            background: transparent;
+            color: #94a3b8;
+            border: 1px solid rgba(100, 116, 139, 0.3);
+        }
+        
+        .btn-ghost:hover {
+            color: #f1f5f9;
+            background: rgba(30, 41, 59, 0.5);
+        }
+        
+        .card-demo {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(30, 41, 59, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .input-demo {
+            width: 100%;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            border-radius: 8px;
+            padding: 0.625rem 0.75rem;
+            color: #f1f5f9;
+            font-size: 0.875rem;
+            font-family: "Courier New", monospace;
+        }
+        
+        .input-demo:focus {
+            outline: none;
+            border-color: rgba(139, 106, 79, 0.6);
+            box-shadow: 0 0 0 3px rgba(139, 106, 79, 0.1);
+        }
+        
+        .input-demo::placeholder {
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Red Cedar Platform</h1>
+        <p class="subtitle">Color Palette & Component Preview</p>
+        
+        <div class="section">
+            <h2>Cedar Palette (Primary Brand Color)</h2>
+            <div class="palette-grid">
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #f6f3f0;">
+                        <span style="color: #0f172a; font-weight: 600; font-size: 0.75rem;">cedar-50</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 50</div>
+                        <div class="color-hex">#f6f3f0</div>
+                        <div class="usage">Light backgrounds</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #e8e0d8;">
+                        <span style="color: #0f172a; font-weight: 600; font-size: 0.75rem;">cedar-100</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 100</div>
+                        <div class="color-hex">#e8e0d8</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #d4c4b4;">
+                        <span style="color: #0f172a; font-weight: 600; font-size: 0.75rem;">cedar-200</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 200</div>
+                        <div class="color-hex">#d4c4b4</div>
+                        <div class="usage">Borders, dividers</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #b9a08a;">
+                        <span style="color: #0f172a; font-weight: 600; font-size: 0.75rem;">cedar-300</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 300</div>
+                        <div class="color-hex">#b9a08a</div>
+                        <div class="usage">Active tabs</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #a07e66;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">cedar-400</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 400</div>
+                        <div class="color-hex">#a07e66</div>
+                        <div class="usage">Hover states</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #8b6a4f;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">cedar-500</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 500 ⭐</div>
+                        <div class="color-hex">#8b6a4f</div>
+                        <div class="usage">Primary brand color</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #745541;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">cedar-600</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 600</div>
+                        <div class="color-hex">#745541</div>
+                        <div class="usage">Primary buttons</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #5e4436;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">cedar-700</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 700</div>
+                        <div class="color-hex">#5e4436</div>
+                        <div class="usage">Pressed states</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #4d382e;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">cedar-800</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 800</div>
+                        <div class="color-hex">#4d382e</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #3d2d25;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">cedar-900</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 900</div>
+                        <div class="color-hex">#3d2d25</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #221914;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">cedar-950</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Cedar 950</div>
+                        <div class="color-hex">#221914</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Slate Palette (Backgrounds & Text)</h2>
+            <div class="palette-grid">
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #f1f5f9;">
+                        <span style="color: #0f172a; font-weight: 600; font-size: 0.75rem;">slate-100</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 100</div>
+                        <div class="color-hex">#f1f5f9</div>
+                        <div class="usage">Primary text</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #e2e8f0;">
+                        <span style="color: #0f172a; font-weight: 600; font-size: 0.75rem;">slate-200</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 200</div>
+                        <div class="color-hex">#e2e8f0</div>
+                        <div class="usage">Hover text</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #94a3b8;">
+                        <span style="color: #0f172a; font-weight: 600; font-size: 0.75rem;">slate-400</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 400</div>
+                        <div class="color-hex">#94a3b8</div>
+                        <div class="usage">Labels, secondary</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #64748b;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">slate-500</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 500</div>
+                        <div class="color-hex">#64748b</div>
+                        <div class="usage">Placeholders</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #334155;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">slate-700</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 700</div>
+                        <div class="color-hex">#334155</div>
+                        <div class="usage">Input borders</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #1e293b;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">slate-800</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 800</div>
+                        <div class="color-hex">#1e293b</div>
+                        <div class="usage">Input backgrounds</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #172033;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">slate-850</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 850 (Custom)</div>
+                        <div class="color-hex">#172033</div>
+                        <div class="usage">Custom dark shade</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #0f172a;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">slate-900</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 900</div>
+                        <div class="color-hex">#0f172a</div>
+                        <div class="usage">Card backgrounds</div>
+                    </div>
+                </div>
+                
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #020617;">
+                        <span style="color: white; font-weight: 600; font-size: 0.75rem;">slate-950</span>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Slate 950 ⭐</div>
+                        <div class="color-hex">#020617</div>
+                        <div class="usage">Main background</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Component Examples</h2>
+            
+            <div class="component-demo">
+                <h3 style="margin-bottom: 1rem; color: #f1f5f9;">Buttons</h3>
+                <div class="button-demo">
+                    <button class="btn btn-primary">Primary Button</button>
+                    <button class="btn btn-ghost">Ghost Button</button>
+                </div>
+                
+                <h3 style="margin-bottom: 1rem; margin-top: 2rem; color: #f1f5f9;">Cards & Inputs</h3>
+                <div class="card-demo">
+                    <label style="display: block; font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Input Label</label>
+                    <input type="text" class="input-demo" placeholder="Enter value...">
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Typography</h2>
+            <div style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(100, 116, 139, 0.3); border-radius: 12px; padding: 2rem;">
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="font-size: 0.75rem; color: #64748b; margin-bottom: 0.5rem;">Display Font (Headings, Logo)</div>
+                    <div style="font-family: Georgia, serif; font-size: 2rem; color: #f1f5f9;">DM Serif Display</div>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="font-size: 0.75rem; color: #64748b; margin-bottom: 0.5rem;">Body Font (UI, Content)</div>
+                    <div style="font-size: 1rem; color: #f1f5f9;">DM Sans - The quick brown fox jumps over the lazy dog</div>
+                </div>
+                
+                <div>
+                    <div style="font-size: 0.75rem; color: #64748b; margin-bottom: 0.5rem;">Mono Font (Numbers, Code, Data)</div>
+                    <div style="font-family: 'Courier New', monospace; font-size: 1rem; color: #f1f5f9;">JetBrains Mono - $1,234,567.89</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

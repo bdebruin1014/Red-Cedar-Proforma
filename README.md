@@ -1,5 +1,17 @@
 # RCH Deal Analyzer — Deploy Guide
 
+## Color Scheme
+
+The Red Cedar Platform features a sophisticated **dark theme** with **warm cedar brown accents**. For complete color palette documentation, design guidelines, and usage patterns, see [COLOR_SCHEME.md](./COLOR_SCHEME.md).
+
+**Quick Reference:**
+- **Primary Brand Color**: Cedar (#8b6a4f - warm brown inspired by red cedar wood)
+- **Background**: Slate-950 (deep blue-tinted black)
+- **Text**: Slate-100 (off-white)
+- **Fonts**: DM Serif Display (headings), DM Sans (body), JetBrains Mono (numbers/data)
+
+---
+
 ## Architecture
 
 ```
