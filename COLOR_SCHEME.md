@@ -1,5 +1,11 @@
 # Red Cedar Platform Color Scheme
 
+## Visual Preview
+
+![Red Cedar Platform Color Palette](https://github.com/user-attachments/assets/2c6350ca-b25d-46e0-86fa-fbc0218cec19)
+
+For an interactive preview, open `color-palette-preview.html` in your browser.
+
 ## Overview
 
 The Red Cedar Platform uses a sophisticated dark theme with warm cedar brown accents. The color scheme creates a professional, elegant interface optimized for financial data visualization and analysis.
